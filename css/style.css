@@ -191,6 +191,9 @@ body {
     flex-flow: row wrap;
     margin-top: 84px;
 }
+.reviews-wrap:first-child {
+    margin-bottom: 45px;
+}
 .reviews-box {
     width: 555px;
 }
@@ -207,21 +210,21 @@ body {
 }
 .quote-img {
     display: inline-block;
-    border-radius: 50%;
     width: 64px;
     height: 64px;
     position: absolute;
 }
-.quote-img1 {
-    background: url(../uploads/review1.jpg) no-repeat;
-}
-.quote-img2 {
-    background: url(../uploads/review2.jpg) no-repeat;
+.quote-img img {
+    display: block;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
 }
 .quote-name {
     color: #36aeea;
-    padding: 22px 0 0 83px;
+    padding: 19px 0 0 84px;
     display: inline-block;
+    font-weight: 600;
 }
 .quote-name::after {
     font-weight: 300;
@@ -399,7 +402,17 @@ body {
         padding: 349px 0;
         background-size: cover;
     }
+    .reviews-wrap:first-child {
+        margin-bottom: 0;
+    }
 }
+
+@media screen and (min-width: 768px){
+    .gallery {
+        justify-content: space-around;
+    }
+}
+
 @media screen and (min-width: 830px) {
     .header-nav {
         display: block;
@@ -425,5 +438,11 @@ body {
     .menu:hover .header-nav {
         display: inline-block;
         z-index: 1;
+    }
+}
+
+@media screen and (min-width: 1128px){
+    .gallery {
+        justify-content: space-between;
     }
 }

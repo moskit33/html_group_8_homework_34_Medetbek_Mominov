@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(".navigation a").on("click", function(event) {
+    $(".header-nav a").on("click", function(event) {
         event.preventDefault();
         var id  = $(this).attr('href');
 
