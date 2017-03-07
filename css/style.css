@@ -24,7 +24,8 @@ body {
     width: 100%;
     flex-direction: row;
     text-transform: uppercase;
-    padding: 24px 0 19px;
+    justify-content: space-between;
+    padding: 0;
     position: fixed;
     z-index: 999;
     -webkit-box-shadow: 24px 30px 0 rgba(0, 0, 0, 0.2);
@@ -34,12 +35,12 @@ body {
 .logo {
     display: inline-block;
     position: relative;
-    width: 192px;
-    padding: 24px 0;
+    width: 134px;
+    padding: 43px 0 0;
 }
 .logo img {
     position: absolute;
-    top: 10px;
+    top: 25px;
     left: 19px;
     width: 117px;
     height: 27px;
@@ -54,9 +55,13 @@ body {
 .menu-button:active,
 .menu-button:focus {
     color: #36aeea;
+    transform-origin: center center;
+    transform: rotate(180deg);
+    transition: all .5s;
 }
 .menu-button {
-    font-size: 25px;
+    font-size: 42px;
+    line-height: 70px;
 }
 
 .menu {
@@ -69,25 +74,25 @@ body {
 }
 .header-nav {
     position: absolute;
-    background: rgba(255, 255, 255, 0.8);
-    top: 22px;
-    right: -10px;
-    width: 200px;
+    background: rgba(52, 115, 136, 0.8);
+    top: 62px;
+    right: -15px;
+    width: 150px;
+    text-align: center;
     display: none;
-    padding: 6px 6px 0 0;
+    padding: 0;
+    margin: 8px 0 0;
 }
 .header-nav a {
     display: inline-block;
     width: 100%;
-    color: #36aeea;
-    padding: 15px 21px 15px 0;
+    color: #000000;
+    padding: 25px 0;
+    margin-right: 21px;
 }
 .header-nav a:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.75);
 }
-
-
-
 
 .popup-btn {
     display: inline-block;
@@ -107,8 +112,8 @@ body {
 
 /**Promo**/
 .slider-blocks {
-    padding: 349px 0;
-    background: url(../uploads/promo-bg.jpg) center center/contain no-repeat;
+    padding: 144px 0;
+    background: url(../uploads/promo-bg.jpg) center center/cover no-repeat;
 }
 /**Gallery**/
 .gallery-block {
@@ -260,7 +265,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
 }
-#registr {
+#registr-form {
     margin-top: 27px;
 }
 .input {
@@ -322,14 +327,27 @@ body {
     }
 }
 @media screen and (min-width: 756px) {
+    .header {
+        padding: 24px 0 19px;
+    }
     .header-nav {
         display: block;
         position: static;
         background: inherit;
         width: 100%;
+        padding: 6px 6px 0 0;
+        margin: 0 0 0 39px;
     }
     .header-nav a {
         display: inline;
+        padding: 15px 0 6px;
+    }
+    .logo img {
+        position: absolute;
+        top: 10px;
+        left: 19px;
+        width: 117px;
+        height: 27px;
     }
     .menu {
         float: left;
@@ -350,8 +368,14 @@ body {
         display: inline-block;
         z-index: 1;
     }
-    .header-nav a:hover {
+    .header-nav a {
+        color: #95a5ad;
+    }
+    .header-nav a:hover,
+    .header-nav a:focus,
+    .header-nav a:active {
         background: inherit;
+        border-bottom: 2px solid #36aeea;
     }
     .header {
         font-size: 12px;
@@ -386,8 +410,5 @@ body {
     .menu:hover .header-nav {
         display: inline-block;
         z-index: 1;
-    }
-    .header-nav a:hover {
-        background: inherit;
     }
 }
