@@ -24,3 +24,13 @@ $('.slider').slick({
     autoplaySpeed: 1000
 });
 
+
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 698){
+        $('.header').addClass("sticky");
+    }
+    else{
+        $('.header').removeClass("sticky");
+    }
+});

@@ -26,25 +26,22 @@ body {
     text-transform: uppercase;
     justify-content: space-between;
     padding: 0;
-    position: fixed;
+    position: absolute;
     z-index: 999;
     -webkit-box-shadow: 24px 30px 0 rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 24px 30px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 24px 30px 0 rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
 }
 .logo {
     display: inline-block;
     position: relative;
     width: 134px;
     padding: 43px 0 0;
+    background: url(../uploads/logo-header.png) 18px 11px no-repeat;
 }
-.logo img {
-    position: absolute;
-    top: 25px;
-    left: 19px;
-    width: 117px;
-    height: 27px;
-}
+
 
 .menu-button {
     color: black;
@@ -109,10 +106,30 @@ body {
     color: #fff;
 }
 
+/**sticky-header**/
+header.sticky {
+    background: #95a5ad;
+    position: fixed;
+    color: #fff;
+    opacity: 1;
 
+}
+header.sticky .popup-btn {
+    border-color: #fff;
+    color: #fff;
+}
+header.sticky > .header-nav a {
+    color: #fff;
+}
+header.sticky > .header-nav a:focus {
+    border-bottom: 2px solid #fff;
+}
+header.sticky .logo {
+    background: url(../uploads/logo-sticky-header.png) 18px 11px  no-repeat;
+}
 /**Promo**/
 .slider-blocks {
-    padding: 144px 0;
+    padding: 349px 0;
     background: url(../uploads/promo-bg.jpg) center center/cover no-repeat;
 }
 /**Gallery**/
@@ -404,6 +421,22 @@ body {
     }
     .reviews-wrap:first-child {
         margin-bottom: 0;
+    }
+    header.sticky {
+        background: #95a5ad;
+        position: fixed;
+        color: #fff;
+
+    }
+    header.sticky > .popup-btn {
+        border-color: #fff;
+        color: #fff;
+    }
+    header.sticky  .header-nav a {
+        color: #fff;
+    }
+    header.sticky  .header-nav a:focus {
+        border-bottom-color: #fff;
     }
 }
 
