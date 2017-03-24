@@ -26,7 +26,7 @@ body {
     text-transform: uppercase;
     justify-content: space-between;
     padding: 0;
-    position: absolute;
+    position: relative;
     z-index: 999;
     -webkit-box-shadow: 24px 30px 0 rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 24px 30px 0 rgba(0, 0, 0, 0.2);
@@ -41,7 +41,6 @@ body {
     padding: 43px 0 0;
     background: url(../uploads/logo-header.png) 18px 11px no-repeat;
 }
-
 
 .menu-button {
     color: black;
@@ -80,14 +79,14 @@ body {
     padding: 0;
     margin: 8px 0 0;
 }
-.header-nav a {
+.header-nav .menu-btn {
     display: inline-block;
     width: 100%;
     color: #000000;
     padding: 25px 0;
     margin-right: 21px;
 }
-.header-nav a:hover {
+.header-nav .menu-btn:hover {
     background: rgba(255, 255, 255, 0.75);
 }
 
@@ -118,23 +117,27 @@ header.sticky .popup-btn {
     border-color: #fff;
     color: #fff;
 }
-header.sticky > .header-nav a {
+header.sticky > .header-nav .menu-btn {
     color: #fff;
 }
-header.sticky > .header-nav a:focus {
+header.sticky > .header-nav .menu-btn:focus {
     border-bottom: 2px solid #fff;
 }
 header.sticky .logo {
     background: url(../uploads/logo-sticky-header.png) 18px 11px  no-repeat;
 }
 /**Promo**/
-.slider-blocks {
-    padding: 349px 0;
-    background: url(../uploads/promo-bg.jpg) center center/cover no-repeat;
+/*.slider-blocks {*/
+    /*padding: 349px 0;*/
+    /*background: url(../uploads/promo-bg.jpg) center center/cover no-repeat;*/
+/*}*/
+.slider-blocks img {
+    width: 100%;
+    height: auto;
 }
 /**Gallery**/
 .gallery-block {
-    padding: 102px 0 62px;
+    padding: 9% 0 62px;
 }
 .title h2 {
     text-align: center;
@@ -149,12 +152,13 @@ header.sticky .logo {
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin-top: 50px;
+    margin-top: 4%;
 }
 .gallery a {
     display: block;
-    width: 360px;
-    height: 243px;
+    max-width: 360px;
+    width: 100%;
+    height: auto;
     margin: 15px 0;
 }
 .gallery img {
@@ -175,7 +179,7 @@ header.sticky .logo {
 }
 .logos-block a {
     display: block;
-    width: 165px;
+    max-width: 165px;
     height: 50px;
 }
 .logos-block img {
@@ -185,8 +189,7 @@ header.sticky .logo {
 }
 /**Reviews and footer**/
 .reviews {
-    /*background: url(../uploads/footer-bg.jpg) center  no-repeat;*/
-    padding: 106px 0 0;
+    padding: 9% 0 0;
 }
 .bg-footer1 {
     width: 100%;
@@ -206,7 +209,7 @@ header.sticky .logo {
     flex-direction: row;
     justify-content: space-between;
     flex-flow: row wrap;
-    margin-top: 84px;
+    margin-top: 8%;
 }
 .reviews-wrap:first-child {
     margin-bottom: 45px;
@@ -345,6 +348,11 @@ header.sticky .logo {
     margin-top: 91px;
 }
 /**Media**/
+@media screen and (min-width: 400px) {
+    .popup-btn {
+        display: inline-block;
+    }
+}
 @media screen and (min-width: 767px) {
     .gallery {
         display: flex;
@@ -373,7 +381,7 @@ header.sticky .logo {
         padding: 6px 6px 0 0;
         margin: 0 0 0 39px;
     }
-    .header-nav a {
+    .header-nav .menu-btn {
         display: inline;
         padding: 15px 0 6px;
     }
@@ -403,21 +411,17 @@ header.sticky .logo {
         display: inline-block;
         z-index: 1;
     }
-    .header-nav a {
+    .header-nav .menu-btn {
         color: #95a5ad;
     }
-    .header-nav a:hover,
-    .header-nav a:focus,
-    .header-nav a:active {
+    .header-nav .menu-btn:hover,
+    .header-nav .menu-btn:focus,
+    .header-nav .menu-btn:active {
         background: inherit;
         border-bottom: 2px solid #36aeea;
     }
     .header {
         font-size: 12px;
-    }
-    .slider-blocks {
-        padding: 349px 0;
-        background-size: cover;
     }
     .reviews-wrap:first-child {
         margin-bottom: 0;
@@ -432,10 +436,10 @@ header.sticky .logo {
         border-color: #fff;
         color: #fff;
     }
-    header.sticky  .header-nav a {
+    header.sticky  .header-nav .menu-btn {
         color: #fff;
     }
-    header.sticky  .header-nav a:focus {
+    header.sticky  .header-nav .menu-btn:focus {
         border-bottom-color: #fff;
     }
 }
@@ -453,7 +457,7 @@ header.sticky .logo {
         background: inherit;
         width: 100%;
     }
-    .header-nav a {
+    .header-nav .menu-btn {
         display: inline;
     }
     .menu {
@@ -466,11 +470,16 @@ header.sticky .logo {
 
     }
     .popup-btn {
-        float: right;
+        position: absolute;
+        right: 15px;
+        top: 0;
     }
     .menu:hover .header-nav {
         display: inline-block;
         z-index: 1;
+    }
+    .header {
+        position: absolute;
     }
 }
 
