@@ -27,7 +27,7 @@ $('.slider').slick({
 
 
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 489){
+    if ($(this).scrollTop() > 488){
         $('.header').addClass("sticky");
     }
     else{
